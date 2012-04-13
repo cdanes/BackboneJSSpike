@@ -1,0 +1,6 @@
+<input id="filter" type="text" />
+<ul>
+  <% _.each(products, function(product){ %>
+   <li><a href='#/productDetails/<%= product.get("Id") %>'><%= product.get("Name") %></a><%= product.get("ShortDescription") ? " - " + product.get("ShortDescription") : "" %></li> 
+  <% }); %>
+</ul>
